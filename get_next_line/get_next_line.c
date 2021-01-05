@@ -1,4 +1,4 @@
-#include "gnl.h"
+#include "get_next_line.h"
 
 int	get_next_line(char **line)
 {
@@ -29,24 +29,4 @@ int	get_next_line(char **line)
 		*line = tmp;
 	}
 	return (r);
-}
-
-#include "gnl.h"
-
-int
-	main(void)
-{
-	int		r;
-	char	*line;
-
-	line = NULL;
-	while ((r = get_next_line(&line)) > 0)
-	{
-		printf("%s\n", line);
-		free(line);
-		line = NULL;
-	}
-	printf("%s", line);
-	free(line);
-	line = NULL;
 }

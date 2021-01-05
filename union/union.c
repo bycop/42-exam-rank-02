@@ -29,5 +29,6 @@ int		main(int argc, char **argv)
 	while (argv[2][++j])
 		if (!check(argv[1], argv[2][j], i) && !check(argv[2], argv[2][j], j))
 			write(1, &argv[2][j], 1);
+	write(1, "\n", 1);
 	return (0);
 }

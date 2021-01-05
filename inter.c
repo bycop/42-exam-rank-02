@@ -2,13 +2,14 @@
 
 int	main(int ac, char **av)
 {
+	int	text[256] = {0};
+	int i;
+
 	if (ac != 3)
 	{
 		write(1, "\n", 1);
 		return (0);
 	}
-	int	text[256] = {0};
-	int i;
 	i = -1;
 	while (av[1][++i])
 		if (text[av[1][i]] == 0)
